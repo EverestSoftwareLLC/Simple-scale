@@ -2,7 +2,6 @@
 This is a simple HTML5 gauge scale, vertical or horizontal, no dependencies.
 
 backgroundColor
-
 The background color of the scale. 
 
 fontName
