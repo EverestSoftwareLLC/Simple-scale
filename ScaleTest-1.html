@@ -1,0 +1,110 @@
+<!DOCTYPE html>  
+<html>
+    <head>
+        <title>Simple scale test - 1</title>
+        <meta http-equiv="Content-Type" content="text/html">
+        <meta charset="utf-8" http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <script src="simpleScale-1.0.0.0.js"></script>
+    
+        <canvas id="D0" style="position:absolute; top:10px; left:10px; display:block; margin:0px; padding:0px;" 
+                width="600" height="40"></canvas>
+        <canvas id="D1" style="position:absolute; top:60px; left:10px; display:block; margin:0px; padding:0px;" 
+                width="600" height="40"></canvas>
+        <canvas id="D2" style="position:absolute; top:110px; left:10px; display:block; margin:0px; padding:0px;" 
+                width="600" height="80"></canvas>
+        <canvas id="D3" style="position:absolute; top:200px; left:10px; display:block; margin:0px; padding:0px;" 
+                width="600" height="100"></canvas>
+
+        <canvas id="D4" style="position:absolute; top:310px; left:10px; display:block; margin:0px; padding:0px;" 
+                width="40" height="500"></canvas>
+        <canvas id="D5" style="position:absolute; top:310px; left:140px; display:block; margin:0px; padding:0px;" 
+                width="100" height="500"></canvas>
+        <canvas id="D6" style="position:absolute; top:310px; left:300px; display:block; margin:0px; padding:0px;" 
+                width="40" height="500"></canvas>
+    </head>
+
+    <body>
+	 <script>
+
+        var scaleD0 = new SimpleScale("D0",	{"backgroundColor":"white",
+                                        "scaleColor":"black",
+                                        "fontColor":"red",
+                                        "fontSize":14,
+                                        "fontName":"Verdana",
+                                        "imageSrc":"",
+                                        "FMax":10,
+												  "FMin":-10,
+					                        "orientation": "horizontal",
+												  "endMargin": -30,
+											     "decimalCount": 1,
+										        "textAlign": "rightBottom",
+										        "ticksAlign": "leftTop",
+										        "majorTickCount": 10,
+										        "minorTickCount": 3,
+										        "majorTickSize": 10,
+										        "minorTickSize": 5,
+                                        "edgeLine":true,
+                                        "invertScale":true,
+                                        "opaque":true,
+												  "markWidth": 1});
+
+        scaleD0.DrawScale();
+        
+       var scaleD1 = new SimpleScale("D1");
+        scaleD1.DrawScale();
+
+        var scaleD2 = new SimpleScale("D2",	{"backgroundColor":"DarkCyan",
+                                        "scaleColor":"white",
+                                        "fontColor":"white",
+                                        "fontSize":14,
+                                        "fontName":"Courier",
+                                        "imageSrc":"",
+                                        "FMax":500.3,
+												  "FMin":-60.2,
+					                        "orientation": "horizontal",
+												  "endMargin": -30,
+											     "decimalCount": 1,
+										        "textAlign": "both",
+										        "ticksAlign": "center",
+										        "majorTickCount": 5,
+										        "minorTickCount": 1,
+										        "majorTickSize": 10,
+										        "minorTickSize": 5,
+                                        "edgeLine":true,
+                                        "invertScale":true,
+                                        "opaque":true,
+												  "markWidth": 1});
+
+        scaleD2.DrawScale();
+
+        var scaleD3 = new SimpleScale("D3",	{"imageSrc":"image.png"});
+        scaleD3.DrawScale();
+
+        var scaleD4 = new SimpleScale("D4",	{"orientation":"vertical",
+                                              "endMargin": -30,
+														 "scaleColor":"blue"});
+        scaleD4.DrawScale();
+
+        var scaleD5 = new SimpleScale("D5",	{"orientation":"vertical",
+                                              "textAlign": "both",
+                                              "ticksAlign": "center",
+                                              "invertScale":false,
+	                                           "fontColor":"green",
+                                              "FMax":0.01,
+		       										 "FMin":-0.99,
+                                              "decimalCount": 2, 
+														 "endMargin": -30});
+        scaleD5.DrawScale();
+
+        var scaleD6 = new SimpleScale("D6",	{"orientation":"vertical",
+                                              "ticksAlign": "leftTop",
+                                              "invertScale":false,
+	                                           "fontColor":"red",
+														 "endMargin": -30});
+        scaleD6.DrawScale();
+ 
+	 </script>
+
+
+	</body>
+</html>
